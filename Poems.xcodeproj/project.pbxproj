@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2710BFAA1C48AF5400B30CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BFA91C48AF5400B30CA9 /* AppDelegate.swift */; };
-		2710BFAC1C48AF5400B30CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BFAB1C48AF5400B30CA9 /* ViewController.swift */; };
 		2710BFAF1C48AF5400B30CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710BFAD1C48AF5400B30CA9 /* Main.storyboard */; };
 		2710BFB11C48AF5400B30CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2710BFB01C48AF5400B30CA9 /* Assets.xcassets */; };
 		2710BFB41C48AF5400B30CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710BFB21C48AF5400B30CA9 /* LaunchScreen.storyboard */; };
 		2710BFBF1C48AF5400B30CA9 /* PoemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BFBE1C48AF5400B30CA9 /* PoemsTests.swift */; };
 		2710BFCA1C48AF5400B30CA9 /* PoemsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BFC91C48AF5400B30CA9 /* PoemsUITests.swift */; };
+		2710BFD81C48B28400B30CA9 /* PoemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BFD71C48B28400B30CA9 /* PoemTableViewCell.swift */; };
+		2710BFDA1C48B67D00B30CA9 /* PoemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BFD91C48B67D00B30CA9 /* PoemsTableViewController.swift */; };
+		2710BFDC1C48B7C800B30CA9 /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710BFDB1C48B7C800B30CA9 /* Poem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		2710BFA61C48AF5400B30CA9 /* Poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2710BFA91C48AF5400B30CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2710BFAB1C48AF5400B30CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2710BFAE1C48AF5400B30CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2710BFB01C48AF5400B30CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2710BFB31C48AF5400B30CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		2710BFC51C48AF5400B30CA9 /* PoemsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoemsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2710BFC91C48AF5400B30CA9 /* PoemsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemsUITests.swift; sourceTree = "<group>"; };
 		2710BFCB1C48AF5400B30CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2710BFD71C48B28400B30CA9 /* PoemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemTableViewCell.swift; sourceTree = "<group>"; };
+		2710BFD91C48B67D00B30CA9 /* PoemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemsTableViewController.swift; sourceTree = "<group>"; };
+		2710BFDB1C48B7C800B30CA9 /* Poem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				2710BFA91C48AF5400B30CA9 /* AppDelegate.swift */,
-				2710BFAB1C48AF5400B30CA9 /* ViewController.swift */,
-				2710BFAD1C48AF5400B30CA9 /* Main.storyboard */,
+				2710BFD71C48B28400B30CA9 /* PoemTableViewCell.swift */,
+				2710BFD91C48B67D00B30CA9 /* PoemsTableViewController.swift */,
+				2710BFDB1C48B7C800B30CA9 /* Poem.swift */,
 				2710BFB01C48AF5400B30CA9 /* Assets.xcassets */,
+				2710BFAD1C48AF5400B30CA9 /* Main.storyboard */,
 				2710BFB21C48AF5400B30CA9 /* LaunchScreen.storyboard */,
 				2710BFB51C48AF5400B30CA9 /* Info.plist */,
 			);
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2710BFAC1C48AF5400B30CA9 /* ViewController.swift in Sources */,
 				2710BFAA1C48AF5400B30CA9 /* AppDelegate.swift in Sources */,
+				2710BFDA1C48B67D00B30CA9 /* PoemsTableViewController.swift in Sources */,
+				2710BFDC1C48B7C800B30CA9 /* Poem.swift in Sources */,
+				2710BFD81C48B28400B30CA9 /* PoemTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
